@@ -1,0 +1,146 @@
+{% extends "public/base.html" %}
+
+{% block content %}
+
+<section class="faculty-page py-5">
+
+    <div class="container">
+
+        <h1 class="page-title text-center">
+            Faculty
+        </h1>
+
+        <p class="page-subtitle text-center">
+            Meet the faculty members driving education, research and innovation.
+        </p>
+
+        <!-- HOD -->
+
+        <div class="hod-section">
+
+            <h2 class="section-heading">
+                ChairPerson/Head of Department
+            </h2>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-5">
+
+                    <div class="faculty-card hod-card">
+
+                        <img src="{{ url_for('static', filename='images/hod.png') }}"
+                            class="faculty-image"
+                            alt="HOD">
+
+                        <h4>Prof. Mukunda Dev Behera</h4>
+
+                        <p class="designation">
+                            Professor & Head of Department
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-envelope"></i>
+                            chairperson.so@iitkgp.ac.in
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-mobile"></i>
+                        </p>
+
+                        <a href="https://www.iitkgp.ac.in/department/CL/faculty/cl-mdbehera" class="profile-btn">
+                            View Profile →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="faculty-section mt-5">
+
+            <h2 class="section-heading">
+
+                Faculty Members
+
+            </h2>
+
+            <div class="row">
+
+                <!-- Faculty Card -->
+
+                <div class="col-lg-6 mb-4">
+
+                    <div class="faculty-card">
+
+                        <img src="{{ url_for('static', filename='images/prof_upadhyay.png') }}"
+                            class="faculty-image">
+
+                        <h4>Prof. Dewashish Upadhyay</h4>
+
+                        <p class="designation">
+                            Professor and Associate-Chairperson
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-envelope"></i>
+                            dewashish@gg.iitkgp.ac.in
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            83398
+                        </p>
+
+                        <a href="https://www.iitkgp.ac.in/department/GG/faculty/gg-dewashish" class="profile-btn">
+                            View Profile →
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 mb-4">
+
+                    <div class="faculty-card">
+
+                        <img src="{{ url_for('static', filename='images/prof_prusty.png') }}"
+                            class="faculty-image">
+
+                        <h4>Prof. Basanta Kumar Prusty</h4>
+
+                        <p class="designation">
+                            Professor and Associate-Chairperson
+                        </p>
+
+                        <p>
+
+                            <i class="fa-solid fa-envelope"></i>
+                            bkprusty@mining.iitkgp.ac.in
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            83398
+                        </p>
+
+                        <a href="https://www.iitkgp.ac.in/department/MI/faculty/mi-bkprusty" class="profile-btn">
+                            View Profile →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

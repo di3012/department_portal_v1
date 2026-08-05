@@ -1,0 +1,165 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIIT KPG</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></head>
+
+<body>
+</body>
+</html> -->
+
+{% extends "public/base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-overlay">
+        <div class="container hero-content">
+            <h1>Vikram Sodhi centre of Excellence for AI-Enabled Geological and Mining Systems</h1>
+            <h3>Some tagline</h3>
+
+            <p>
+                Empowering students through cutting-edge education,
+                impactful research and industry collaboration.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section class="news-events py-5">
+    <div class="container">
+
+        <!-- <h2 class="section-title text-center mb-5">
+            Latest Updates
+        </h2> -->
+
+        <div class="row"> <!-- NEWS -->
+            <div class="col-lg-6 mb-4">
+
+                <div class="update-card">
+
+                    <h3 class="update-title">
+                        <!-- <i class="fa-solid fa-newspaper"></i> -->
+                        News
+                    </h3>
+
+                    <div class="update-item">
+                        <h5>AI Workshop Announced</h5>
+
+                        <p>
+                            A hands-on workshop introducing students to modern AI.
+                            <br>
+                            <strong>Registration Deadline:</strong> 25 Aug 2026
+                        </p>
+
+                        <a href="#">
+                            Read More
+                        </a>
+
+                        <div class="post-date">
+                            Posted on 12 Aug 2026
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="update-item">
+                        <h5>New Faculty Joined</h5>
+
+                        <p>
+                            Lorem ipsum dolor sit amet.
+                        </p>
+
+                        <a href="#">
+                            Read More
+                        </a>
+
+                        <div class="post-date">
+                            Posted on 08 Aug 2026
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- EVENTS -->
+
+            <div class="col-lg-6 mb-4">
+                <div class="update-card">
+
+                    <h3 class="update-title">
+                        <!-- <i class="fa-solid fa-calendar-days"></i> -->
+                        Upcoming Events
+                    </h3>
+
+                    <div class="update-item">
+                        <h5>Guest Lecture</h5>
+
+                        <p>
+                            Lorem ipsum dolor sit amet.
+                        </p>
+
+                        <a href="#">
+                            Read More
+                        </a>
+
+                        <div class="post-date">
+                            Posted on 01 Aug 2026
+                        </div> 
+                    </div>
+
+                    <hr>
+
+                    <div class="update-item">
+                        
+                        <h5>Research Symposium</h5>
+
+                        <p>
+                            Lorem ipsum dolor sit amet.
+                        </p>
+
+                        <a href="#">
+                            Read More
+                        </a>
+
+                        <div class="post-date">
+                            Posted on 02 Aug 2026
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,134 @@
+<header>
+
+    <!-- Top Branding Bar -->
+    <div class="branding-bar">
+
+        <div class="container">
+
+            <a class="branding" href="#">
+
+                <img src="{{ url_for('static', filename='images/iitkpg_logo.png') }}" class="logo" alt="Logo">
+
+                <div class="department-name">
+                    Vikram Sodhi Centre of Excellence for AI-Enabled Geological and Mining Systems
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+
+        <div class="container">
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+
+                <ul class="navbar-nav">
+
+                    <!-- Home -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="{{ url_for('main.home') }}">
+                            Home
+                        </a>
+
+                    </li>
+
+                    <!-- Academics -->
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Academics
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Undergraduate</a></li>
+                            <li><a class="dropdown-item" href="#">Postgraduate</a></li>
+                        </ul>
+
+                    </li>
+
+                    <!-- Research -->
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Research
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Areas of Focus</a></li>
+                            <li><a class="dropdown-item" href="#">Laboratories</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- People -->
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            People
+                        </a>
+
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="{{ url_for('main.faculty') }}">Faculty</a></li>
+                            <li><a class="drop down-item" href="#">Guest Lecturers</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- Events -->
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Events
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">2026</a></li>
+                        </ul>
+
+                    </li>
+
+                    <!-- About -->
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            About
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Why IIT Kharagpur</a></li>
+                            <li><a class="dropdown-item" href="#">Facts</a></li>
+                            <li><a class="dropdown-item" href="#">News</a></li>
+                            <li><a class="dropdown-item" href="#">Contact Us</a></li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
