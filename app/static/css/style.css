@@ -2,13 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
 
 :root{
-    --primary: #D85604;        /* University Orange */
-    --primary-dark: #B94700;   /* Hover/buttons */
-    --primary-light: #FBE9DD;  /* Light backgrounds */
-    --secondary: #FFF8F4;      /* Page background */
+    --primary: #24533F;        /* Forest green */
+    --primary-dark: #183B2D;   /* Deep forest green */
+    --primary-light: #E6EEE9;  /* Soft green */
+    --secondary: #F7F4ED;      /* Warm off-white */
+    --accent: #9A7652;         /* Earthy brown */
     --text: #2B2B2B;
     --white: #FFFFFF;
-    --border: #E8E8E8;
+    --border: #DED8CC;         /* Warm neutral */
 }
 
 * {
@@ -97,26 +98,80 @@ main {
     font-weight:500;
 }
 
+/* Announcement Bar */
+
+.announcement-bar{
+    background: black;
+    color:var(--white);
+    overflow:hidden;
+    white-space:nowrap;
+    padding:9px 0;
+    font-size:0.9rem;
+}
+
+.announcement-track{
+    display:inline-flex;
+    gap:80px;
+    padding-left:100%;
+    animation:announcement-scroll 25s linear infinite;
+}
+
+.announcement-track span{
+    display:inline-block;
+}
+
+.announcement-bar:hover .announcement-track{
+    animation-play-state:paused;
+}
+
+@keyframes announcement-scroll{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+}
+
 /* Hero CSS */
 
 .hero {
     height: 75vh;
-    background: url("../images/hero.png") center center/cover no-repeat;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+}
 
+.hero .carousel,
+.hero .carousel-inner,
+.hero .carousel-item {
+    height: 100%;
+}
+
+.hero-slide {
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-slide-1 {
+    background-image: url("../images/hero_2.jpg");
+}
+
+.hero-slide-2 {
+    background-image: url("../images/hero.png");
 }
 
 .hero-overlay {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .65);
+    background: rgba(0, 0, 0, .60);
+
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .hero-content {
@@ -127,7 +182,7 @@ main {
 
 .hero h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: capitalize;
@@ -149,10 +204,34 @@ main {
 
 }
 
+/* Hero Carousel */
+
+.hero .carousel-indicators {
+    bottom: 25px;
+}
+
+.hero .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.hero .carousel-control-prev,
+.hero .carousel-control-next {
+    width: 8%;
+}
+
+.hero .carousel-control-prev-icon,
+.hero .carousel-control-next-icon {
+    width: 35px;
+    height: 35px;
+}
+
 /* News and Events css  */
 
 .news-events{
-    background:#f7f9fc;
+    background:var(--secondary);
 }
 
 .section-title{
@@ -163,7 +242,7 @@ main {
 }
 
 .update-card{
-    background:white;
+    background:var(--white);
     border-radius:14px;
     padding:30px;
     height:100%;
@@ -261,105 +340,173 @@ main {
 ================================== */
 
 .faculty-page{
-
     background:#f8f9fa;
-
     min-height:100vh;
 
 }
 
 .page-title{
-
     font-size:2.5rem;
-
     font-weight:700;
-
     color:var(--primary);
 
 }
 
 .page-subtitle{
-
     color:#666;
-
     margin-bottom:50px;
 
 }
 
 .section-heading{
-
     color:var(--primary);
-
     margin-bottom:30px;
-
     font-weight:600;
 
 }
 
 .faculty-card{
-
     background:white;
-
     border-radius:15px;
-
     padding:30px;
-
     text-align:center;
-
     box-shadow:0 8px 20px rgba(0,0,0,.08);
-
     transition:.3s;
-
     height:100%;
 
 }
 
 .faculty-card:hover{
-
     transform:translateY(-6px);
 
 }
 
 .faculty-image{
-
     width:170px;
-
     height:170px;
-
     object-fit:cover;
-
     border-radius:50%;
-
     margin-bottom:20px;
-
     border:4px solid var(--primary);
 
 }
 
 .designation{
-
     color:#666;
-
     font-weight:500;
 
 }
 
 .profile-btn{
-
     display:inline-block;
-
     margin-top:10px;
-
     text-decoration:none;
-
     color:var(--primary);
-
     font-weight:600;
 
 }
 
 .profile-btn:hover{
-
     text-decoration:none;
 
+}
+
+/* ===============================
+   Director's Message
+================================== */
+
+.director-message {
+    background: var(--white);
+    padding: 80px 0;
+}
+
+.director-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* Director Image */
+
+.director-image-wrapper {
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.director-image {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--primary-light);
+    outline: 3px solid var(--accent);
+}
+
+.director-image-wrapper h4 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.director-image-wrapper p {
+    color: #777;
+    margin: 0;
+}
+
+
+/* Director Content */
+
+.director-content {
+    flex: 1;
+}
+
+.director-label {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.director-content h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.director-content p {
+    color: #5F5F5F;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.director-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.director-link i {
+    margin-left: 6px;
+    transition: .3s;
+}
+
+.director-link:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.director-link:hover i {
+    transform: translateX(5px);
 }
