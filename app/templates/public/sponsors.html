@@ -1,0 +1,115 @@
+{% extends "public/base.html" %}
+
+{% block title %}
+Sponsors
+{% endblock %}
+
+{% block content %}
+
+<section class="sponsors-page">
+
+    <div class="container">
+
+        <div class="sponsors-header">
+
+            <h1>
+                Sponsors
+            </h1>
+
+            <!-- <p>
+                Our sponsors play an important role in supporting the
+                Centre's vision, research and initiatives.
+            </p> -->
+
+        </div>
+
+
+        <div class="sponsor-card">
+
+            <h2>
+                Sun Valley Investments & Mineros SA
+            </h2>
+
+            <div class="sponsor-short-description">
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    This is a short introduction to the sponsor and their
+                    association with the Centre.
+                </p>
+
+            </div>
+
+
+            <div class="collapse" id="sponsorDetails">
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    This section can contain more information about the
+                    sponsor, their organisation and their contribution to
+                    the Centre.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Additional details about the collaboration, initiatives,
+                    projects or support provided by the sponsor can be
+                    mentioned here.
+                </p>
+
+            </div>
+
+
+            <a class="sponsor-link"
+               data-bs-toggle="collapse"
+               href="#sponsorDetails"
+               role="button"
+               aria-expanded="false"
+               aria-controls="sponsorDetails">
+
+                <span class="sponsor-read-more">
+                    Read More
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+
+    const sponsorDetails = document.getElementById('sponsorDetails');
+    const sponsorReadMore = document.querySelector('.sponsor-read-more');
+    const sponsorIcon = document.querySelector('.sponsor-link i');
+
+    sponsorDetails.addEventListener('shown.bs.collapse', function () {
+
+        sponsorReadMore.textContent = 'Read Less';
+
+        sponsorIcon.classList.remove('fa-arrow-right');
+        sponsorIcon.classList.add('fa-arrow-up');
+
+    });
+
+    sponsorDetails.addEventListener('hidden.bs.collapse', function () {
+
+        sponsorReadMore.textContent = 'Read More';
+
+        sponsorIcon.classList.remove('fa-arrow-up');
+        sponsorIcon.classList.add('fa-arrow-right');
+
+    });
+
+</script>
+
+{% endblock %}
