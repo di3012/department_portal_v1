@@ -449,6 +449,14 @@ main {
     margin: 0;
 }
 
+.director-name {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+.director-name:hover {
+    color: var(--accent);
+}
 
 /* Director Content */
 
@@ -630,14 +638,4 @@ main {
 
 .research-link:hover i {
     transform: translateX(5px);
-}
-
-
-* {
-    outline: 1px solid red;
-}
-
-html,
-body {
-    outline: 3px solid blue;
 }

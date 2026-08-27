@@ -248,15 +248,16 @@ Home
 
             <div class="col-md-4 text-center director-image-wrapper">
 
-                <img src="{{ url_for('static', filename='images/director.jpg') }}" alt="Director"
-                    class="director-image">
+                <img src="{{ url_for('static', filename='images/hod.png') }}" alt="Director" class="director-image">
 
                 <h4>
-                    Director Name
+                    <a href="https://www.iitkgp.ac.in/department/CL/faculty/cl-mdbehera" class="director-name">
+                        Prof. Mukunda Dev Behera
+                    </a>
                 </h4>
 
                 <p>
-                    Director
+                    Chairperson
                 </p>
 
             </div>
@@ -267,30 +268,62 @@ Home
             <div class="col-md-8 director-content">
 
                 <span class="director-label">
-                    MESSAGE FROM THE DIRECTOR
+                    MESSAGE FROM THE CHAIRPERSON
                 </span>
 
-                <h2>
+                <!-- <h2>
                     Welcome to the Vikram Sodhi Centre of Excellence
-                </h2>
+                </h2> -->
 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    The Centre is committed to advancing innovative research,
-                    education and collaboration in geological and mining systems
-                    through the application of artificial intelligence and
-                    emerging technologies.
+                    The Vikram Sodhi Centre of Excellence for AI-Enabled Geological and Mining Systems at IIT Kharagpur
+                    reflects a bold vision to advance India's mining sector through cutting-edge research, innovation,
+                    and strong partnerships with industry, government, and leading national and international research
+                    institutions. Established as a Centre of Excellence (CoE) from its inception, it is committed to
+                    delivering impactful research, industrial relevance, and academic excellence.
                 </p>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    We aim to create an environment that encourages
-                    interdisciplinary research, academic excellence and
-                    meaningful industry collaboration.
-                </p>
+                <div class="collapse" id="directorFullMessage">
 
-                <a href="#" class="director-link">
-                    Read More <i class="fa-solid fa-arrow-right"></i>
+                    <p>
+                        The CoE focuses on developing AI-enabled solutions for mineral exploration by integrating
+                        multi-source geoscientific data, embedding geological mineralisation models, leveraging analogue
+                        deposit data, and creating repeatable workflows for generating drill-ready exploration targets.
+                        Its
+                        research spans terrestrial and deep-sea mining, with special emphasis on critical minerals such
+                        as
+                        lithium, copper, antimony, rare earth elements (REEs), and other strategic resources
+                    </p>
+
+                    <p>
+                        Building on IIT Kharagpur's long-standing strengths in Geology, Geophysics, Mining Engineering,
+                        Metallurgy, Computer Science combined with its capabilities in Artificial Intelligence and Data
+                        Science, the CoE provides a unique interdisciplinary platform for research, consultancy,
+                        innovation,
+                        and capacity building. It also aims to promote internships, advanced research, executive
+                        education,
+                        certificate programmes, and future academic programmes in AI-enabled Mining Systems and study of
+                        Critical Minerals.
+                    </p>
+
+                    <p>
+                        The CoE warmly welcomes students, researchers, faculty members, industry leaders, policymakers,
+                        government agencies, and inter-/national collaborators to join this transformative initiative.
+                        Through collective expertise and shared commitment, we aspire to build a vibrant ecosystem that
+                        drives scientific excellence, technological innovation, sustainable resource development and
+                        strategic capability for the future of mining geology using AI technology. This will lead to
+                        resource optimization, both in terms of manpower and financial resources.
+                    </p>
+
+                </div>
+
+
+                <a class="director-link" data-bs-toggle="collapse" href="#directorFullMessage" role="button"
+                    aria-expanded="false" aria-controls="directorFullMessage">
+
+                    <span class="read-more-text">Read More</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -300,5 +333,35 @@ Home
     </div>
 
 </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+
+    const directorMessage = document.getElementById('directorFullMessage');
+    const readMoreText = document.querySelector('.read-more-text');
+    const readMoreIcon = document.querySelector('.director-link i');
+
+    directorMessage.addEventListener('shown.bs.collapse', function () {
+
+        readMoreText.textContent = 'Read Less';
+
+        readMoreIcon.classList.remove('fa-arrow-right');
+        readMoreIcon.classList.add('fa-arrow-up');
+
+    });
+
+    directorMessage.addEventListener('hidden.bs.collapse', function () {
+
+        readMoreText.textContent = 'Read More';
+
+        readMoreIcon.classList.remove('fa-arrow-up');
+        readMoreIcon.classList.add('fa-arrow-right');
+
+    });
+
+</script>
 
 {% endblock %}
