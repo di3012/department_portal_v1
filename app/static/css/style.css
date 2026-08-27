@@ -250,7 +250,7 @@ main {
 }
 
 .update-card{
-    background:var(--white);
+    background:var(--primary-light);
     border-radius:14px;
     padding:30px;
     height:100%;
@@ -424,7 +424,7 @@ main {
 ================================== */
 
 .director-message {
-    background: var(--white);
+    background: var(--secondary);
     padding: 80px 0;
 }
 
@@ -721,5 +721,65 @@ main {
 }
 
 .sponsor-link:hover i {
+    transform: translateX(5px);
+}
+
+/* ===============================
+   About Department
+================================== */
+
+.about-department {
+    background: var(--secondary);
+    padding: 80px 0;
+}
+
+.about-content {
+    max-width: 950px;
+    margin: auto;
+}
+
+.about-label {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.about-content h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #5F5F5F;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.about-link:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.about-link i {
+    margin-left: 6px;
+    transition: .3s;
+}
+
+.about-link:hover i {
     transform: translateX(5px);
 }
