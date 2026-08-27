@@ -9,3 +9,7 @@ def home():
 @main.route("/faculty")
 def faculty():
     return render_template("public/faculty.html")
+
+@main.route("/research-verticals")
+def research_verticals():
+    return render_template("public/research.html")

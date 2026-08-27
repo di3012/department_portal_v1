@@ -510,3 +510,132 @@ main {
 .director-link:hover i {
     transform: translateX(5px);
 }
+
+/* ===============================
+   Research Verticals
+================================== */
+
+.research-page {
+    background: var(--secondary);
+    min-height: 100vh;
+    padding: 80px 0;
+}
+
+.research-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.research-header h1 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.research-header p {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* Research List */
+
+.research-list {
+    max-width: 950px;
+    margin: auto;
+}
+
+.research-item {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    transition: .3s ease;
+}
+
+.research-item:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+.research-item:last-child {
+    border-radius: 0 0 12px 12px;
+}
+
+
+/* Main row */
+
+.research-toggle {
+    width: 100%;
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 30px;
+
+    color: var(--primary-dark);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    text-align: left;
+
+    transition: .3s ease;
+}
+
+.research-toggle:hover {
+    transform: scale(1.02);
+    color: var(--primary);
+}
+
+
+/* Plus icon */
+
+.research-toggle i {
+    color: var(--accent);
+    transition: transform .3s ease;
+}
+
+
+/* Rotate plus when expanded */
+
+.research-toggle[aria-expanded="true"] i {
+    transform: rotate(45deg);
+}
+
+
+/* Expanded content */
+
+.research-description {
+    padding: 0 30px 25px;
+}
+
+.research-description p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.research-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.research-link i {
+    margin-left: 6px;
+    transition: .3s;
+}
+
+.research-link:hover {
+    color: var(--accent);
+}
+
+.research-link:hover i {
+    transform: translateX(5px);
+}
